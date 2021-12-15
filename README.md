@@ -46,6 +46,7 @@ Note that currently comments will always be shown as comments, even if the first
             "name": "object-head.sr",
             "match": "(?<=[^:]::)([0-9]+)"
             // Object heads start with two colons and specify their scope size
+            // Note that the top level scope requires names, and therefore we can assume that characters before the "::" always exist (name in top level, and scoping dots in all other levels)
         }
     ]
 },
@@ -55,6 +56,7 @@ Note that currently comments will always be shown as comments, even if the first
             "name": "list-head.sr",
             "match": "(?<=[^:]:::)([0-9]+)"
             // Object heads start with three colons and specify their scope size
+            // Note that the top level scope requires names, and therefore we can assume that characters before the "::" always exist (name in top level, and scoping dots in all other levels)
         }
     ]
 },
