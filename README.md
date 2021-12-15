@@ -4,6 +4,9 @@ Add syntax highlighting for https://github.com/ltOgt/SR-dart to vscode.
 
 Since this extension is not published, you have to clone it into `~/.vscode/extensions/`.
 
+# Major Shortcomming!
+Note that currently comments will always be shown as comments, even if the first line is not a comment (SR will then treat any other comments as values instead)
+
 ## Explenation
 ```json
 "scope": {
