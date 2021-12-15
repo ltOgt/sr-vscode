@@ -86,25 +86,25 @@ Add the following to your `settings.json` (e.g. at `~/.config/Code/User/`):
             {   
                 "scope": "name.sr",
                 "settings": {
-                    "foreground": "#5454fc"
+                    "foreground": "#b65c63"
                 }   
             },
             {   
                 "scope": "value.sr",
                 "settings": {
-                    "foreground": "#5454fc"
+                    "foreground": "#90b773"
                 }   
             },
             {   
                 "scope": "object-head",
                 "settings": {
-                    "foreground": "#5252fa"
+                    "foreground": "#1a8cdd"
                 }   
             },
             {   
                 "scope": "list-head",
                 "settings": {
-                    "foreground": "#5252fa"
+                    "foreground": "#1a8cdd"
                 }   
             },
             {   
