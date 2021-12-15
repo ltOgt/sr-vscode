@@ -1,0 +1,13 @@
+** comments enabled
+field-1:value-1
+field-2:value-2
+object::9
+.of1:v1
+.of2:v2
+.nestedObject::1
+..nestedField:100** some comment
+.nestedList:::4
+..:1
+..:2
+..:3
+..:4

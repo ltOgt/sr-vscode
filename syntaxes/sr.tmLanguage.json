@@ -1,0 +1,78 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SR",
+	"patterns": [
+		{
+			"include": "#scope"
+		},
+		{
+			"include": "#name"
+		},
+		{
+			"include": "#value"
+		},
+		{
+			"include": "#object-head"
+		},
+		{
+			"include": "#list-head"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"comment": {
+			"name": "comment.sr",
+			"begin": "(\\*\\*)(?=\\s)",
+			"end": "$",
+			"patterns": [
+				{
+					"name": "constant.character.escape.sr",
+					"match": "\\\\."
+				}
+			]
+		},
+		"scope": {
+			"patterns": [
+				{
+					"name": "scope.sr",
+					"match": "(?<=^)(\\.)+"
+				}
+			]
+		},
+		"name": {
+			"patterns": [
+				{
+					"name": "name.sr",
+					"match": "(?<=(^\\.*))([^:.]+[^:]*)(?=:)"
+				}
+			]
+		},
+		"value": {
+			"patterns": [
+				{
+					"name": "value.sr",
+					"match": "(?<=[^:]:)([^:]{1}[^(**)]*)"
+				}
+			]
+		},
+		"object-head": {
+			"patterns": [
+				{
+					"name": "object-head.sr",
+					"match": "(?<=[^:]::)([0-9]+)"
+				}
+			]
+		},
+		"list-head": {
+			"patterns": [
+				{
+					"name": "list-head.sr",
+					"match": "(?<=[^:]:::)([0-9]+)"
+				}
+			]
+		}
+	},
+	"scopeName": "source.sr"
+}
