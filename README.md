@@ -29,7 +29,7 @@ Since this extension is not published, you have to clone it into `~/.vscode/exte
     "patterns": [
         {
             "name": "value.sr",
-            "match": "(?<=[^:]:)([^:]{1}.*)"
+            "match": "(?<=[^:]:)([^:]{1}[^(**)]*)"
             // Values start after a single colon (after scope or name)
             // They may start with dot, but not with colon
             // They may contain colons after the first character
