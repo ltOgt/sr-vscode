@@ -55,8 +55,18 @@ Note that currently comments will always be shown as comments, even if the first
         {
             "name": "list-head.sr",
             "match": "(?<=[^:]:::)([0-9]+)"
-            // Object heads start with three colons and specify their scope size
-            // Note that the top level scope requires names, and therefore we can assume that characters before the "::" always exist (name in top level, and scoping dots in all other levels)
+            // List heads start with three colons and specify their scope size
+            // Note that the top level scope requires names, and therefore we can assume that characters before the ":::" always exist (name in top level, and scoping dots in all other levels)
+        }
+    ]
+},
+"set-head": {
+    "patterns": [
+        {
+            "name": "set-head.sr",
+            "match": "(?<=[^:]::::)([0-9]+)"
+            // Set heads start with three colons and specify their scope size
+            // Note that the top level scope requires names, and therefore we can assume that characters before the "::::" always exist (name in top level, and scoping dots in all other levels)
         }
     ]
 },
@@ -75,7 +85,7 @@ Note that currently comments will always be shown as comments, even if the first
 
 ## Custom coloring
 
-Add the following to your `settings.json` (e.g. at `~/.config/Code/User/`):
+Add the following to your settings.json (e.g. at ~/.config/Code/User/ for Linux or ~/Library/Application Support/Code/User/settings.json for mac):
 
 ```json
 {
@@ -108,6 +118,12 @@ Add the following to your `settings.json` (e.g. at `~/.config/Code/User/`):
             },
             {   
                 "scope": "list-head",
+                "settings": {
+                    "foreground": "#1a8cdd"
+                }   
+            },
+            {   
+                "scope": "set-head",
                 "settings": {
                     "foreground": "#1a8cdd"
                 }   

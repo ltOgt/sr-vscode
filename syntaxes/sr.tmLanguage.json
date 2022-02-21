@@ -18,6 +18,9 @@
 			"include": "#list-head"
 		},
 		{
+			"include": "#set-head"
+		},
+		{
 			"include": "#comment"
 		}
 	],
@@ -70,6 +73,14 @@
 				{
 					"name": "list-head.sr",
 					"match": "(?<=[^:]:::)([0-9]+)"
+				}
+			]
+		},
+		"set-head": {
+			"patterns": [
+				{
+					"name": "set-head.sr",
+					"match": "(?<=[^:]::::)([0-9]+)"
 				}
 			]
 		}
