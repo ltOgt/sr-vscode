@@ -165,3 +165,6 @@ For you and my future self to better understand the regular expressions, here is
     - `(?=$|[\\s|\\|])` same as positive look-ahead but behind the previous match group
 
 for text mate regex in general see https://macromates.com/manual/en/regular_expressions
+
+# TODO
+Define an injection grammar for markdown, as described here: https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#injection-grammars
